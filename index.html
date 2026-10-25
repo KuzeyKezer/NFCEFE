@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efe Batı Güleç | Malzeme & Makine Yüksek Mühendisi</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome İkonlar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Özel CSS Dosyamız -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 selection:bg-cyan-500 selection:text-black">
+
+  <!-- Rüzgarda Dalgalanan Arka Plan (Cyan / Mühendislik Teması) -->
+  <div class="silk-container">
+    <div class="silk-wave wave-1"></div>
+    <div class="silk-wave wave-2"></div>
+    <div class="silk-wave wave-3"></div>
+  </div>
+
+  <!-- Ana İçerik -->
+  <main class="w-full max-w-md mx-auto space-y-4 my-6 relative z-10">
+
+    <!-- Profil Kartı -->
+    <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden">
+      <!-- Üst Vurgu Çizgisi -->
+      <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      
+      <!-- Dil Değiştirici Buton (TR / EN) -->
+      <div class="absolute top-4 right-4 z-20">
+        <button id="langToggle" onclick="toggleLanguage()" class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 text-[11px] font-semibold text-slate-300 hover:text-white hover:border-slate-500 transition flex items-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-globe text-cyan-400 text-[10px]"></i>
+          <span id="langText">EN</span>
+        </button>
+      </div>
+
+      <!-- Profil Fotoğrafı (efe.jpg) -->
+      <div class="relative w-24 h-24 mx-auto mb-4 mt-2">
+        <img src="efe.jpg" alt="Efe Batı Güleç" class="w-full h-full rounded-full object-cover avatar-halo" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Efe+Gulec&background=0284c7&color=fff&size=128&bold=true';">
+      </div>
+
+      <!-- İsim & Alan -->
+      <h1 class="text-2xl font-bold tracking-tight text-white">Efe Batı Güleç</h1>
+      <p id="roleTitle" class="text-xs font-semibold text-cyan-400 tracking-wider uppercase mt-1">MALZEME & MAKİNE YÜKSEK MÜHENDİSİ</p>
+      
+      <!-- Rozet -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mt-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-300 font-medium">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 pulse-dot inline-block"></span>
+        <span id="badgeText">İYTE • Toz Metalurjisi Lab.</span>
+      </div>
+
+      <!-- Özet -->
+      <p id="bioText" class="text-xs text-slate-300/90 mt-3 leading-relaxed font-normal">
+        İYTE Malzeme Bilimi & Makine Mühendisliği (Y.L.) mezunu. Titanyum matrisli kompozitler, toz metalurjisi, vakum/ince film teknolojileri ve mekanik karakterizasyon üzerine odaklanıyor.
+      </p>
+
+      <!-- Ana Aksiyon Butonları -->
+      <div class="grid grid-cols-2 gap-3 mt-6">
+        <!-- vCard Butonu -->
+        <a id="vcfLink" href="rehber.vcf" download="Efe_Bati_Gulec.vcf" class="btn-primary-glow flex items-center justify-center gap-2 text-slate-950 font-bold py-2.5 px-3 rounded-xl text-xs">
+          <i class="fa-solid fa-address-card text-sm"></i>
+          <span id="btnSave">Rehbere Kaydet</span>
+        </a>
+        <!-- CV Görüntüleme -->
+        <a id="cvLink" href="Cvefe.pdf" target="_blank" class="btn-secondary flex items-center justify-center gap-2 text-slate-200 font-semibold py-2.5 px-3 rounded-xl text-xs">
+          <i class="fa-solid fa-file-pdf text-red-400 text-sm"></i>
+          <span id="btnCv">CV'yi İncele</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Deneyim ve Projeler -->
+    <div class="grid grid-cols-1 gap-3">
+      
+      <!-- Deneyim 1: Toz Metalurjisi & İleri Kompozitler -->
+      <div class="glass-card rounded-2xl p-4 cursor-default">
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 text-base">
+            <i class="fa-solid fa-atom"></i>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 id="proj1Title" class="text-sm font-semibold text-white tracking-tight">Toz Metalurjisi & Ti64 Kompozitler</h3>
+              <span id="proj1Tag" class="text-[10px] text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20 font-medium">Ar-Ge & Karakterizasyon</span>
+            </div>
+            <p id="proj1Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
+              Sıcak presleme toz metalurjisi ile Ti-6Al-4V metal matrisli kompozit üretimi; SEM, XRD analizleri ve yüksek sıcaklık mekanik testleri.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deneyim 2: Akademik Yayınlar & TÜBİTAK Projeleri -->
+      <div class="glass-card rounded-2xl p-4 cursor-default">
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0 text-base">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 id="proj2Title" class="text-sm font-semibold text-white tracking-tight">İnce Filmler & Uluslararası Yayınlar</h3>
+              <span id="proj2Tag" class="text-[10px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md border border-blue-500/20 font-medium">TÜBİTAK & İnce Film</span>
+            </div>
+            <p id="proj2Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
+              Manyetik sıçratma (sputtering) ile VO2/ITO ince film kaplamaları, THz modülasyonu ve SCI indeksli 4 uluslararası makale.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- İletişim Butonları -->
+    <div class="flex items-center justify-center gap-3 py-1">
+      <a href="tel:+905078920717" title="Ara" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-solid fa-phone text-base"></i>
+      </a>
+      <a href="BURAYA_EFE_NIN_LINKEDIN_LINKINI_YAPISTIR" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-brands fa-linkedin-in text-base"></i>
+      </a>
+      <a href="mailto:efebatigulec@gmail.com" title="E-posta Gönder" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-solid fa-envelope text-base"></i>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <p id="footerText" class="text-center text-[10px] text-slate-600 font-medium tracking-widest uppercase">
+      Temassız NFC Paylaşımı • Dijital Kartvizit
+    </p>
+
+  </main>
+
+  <!-- Dil Değiştirme Mantığı -->
+  <script>
+    let currentLang = 'tr';
+
+    const content = {
+      tr: {
+        toggleBtn: 'EN',
+        role: 'MALZEME & MAKİNE YÜKSEK MÜHENDİSİ',
+        badge: 'İYTE • Toz Metalurjisi Lab.',
+        bio: 'İYTE Malzeme Bilimi & Makine Mühendisliği (Y.L.) mezunu. Titanyum matrisli kompozitler, toz metalurjisi,mekanik karakterizasyon üzerine odaklanıyor.',
+        btnSave: 'Rehbere Kaydet',
+        btnCv: "CV'yi İncele",
+        cvFile: 'Cvefe.pdf',
+        proj1Title: 'Toz Metalurjisi & Ti64 Kompozitler',
+        proj1Tag: 'Ar-Ge & Karakterizasyon',
+        proj1Desc: 'Sıcak presleme toz metalurjisi ile Ti-6Al-4V metal matrisli kompozit üretimi; SEM, XRD analizleri ve yüksek sıcaklık mekanik testleri.',
+        proj2Title: 'İnce Filmler & Uluslararası Yayınlar',
+        proj2Tag: 'TÜBİTAK & İnce Film',
+        proj2Desc: 'Manyetik sıçratma (sputtering) ile VO2/ITO ince film kaplamaları, THz modülasyonu ve SCI indeksli 4 uluslararası makale.',
+        footer: 'Temassız NFC Paylaşımı • Dijital Kartvizit'
+      },
+      en: {
+        toggleBtn: 'TR',
+        role: 'MATERIALS ENGINEER / MSC MECHANICAL ENGINEER',
+        badge: 'IZTECH • Powder Metallurgy Lab',
+        bio: 'B.Sc. in Materials Science and M.Sc. in Mechanical Engineering from IZTECH. Focused on titanium matrix composites, powder metallurgy, advanced mechanical characterization.',
+        btnSave: 'Save Contact',
+        btnCv: 'View Resume',
+        cvFile: 'Cvefe.pdf',
+        proj1Title: 'Powder Metallurgy & Ti64 Composites',
+        proj1Tag: 'R&D & Characterization',
+        proj1Desc: 'Fabrication of Ti-6Al-4V metal matrix composites via hot pressing; SEM/XRD analyses and high-temperature mechanical testing.',
+        proj2Title: 'Thin Films & Published Research',
+        proj2Tag: 'TÜBİTAK & Thin Films',
+        proj2Desc: 'Magnetron sputtering deposition of VO2/ITO films, THz wave modulation, and author of 4 SCI-indexed journal publications.',
+        footer: 'Contactless NFC Sharing • Digital Card'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      const c = content[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.getElementById('langText').textContent = c.toggleBtn;
+      document.getElementById('roleTitle').textContent = c.role;
+      document.getElementById('badgeText').textContent = c.badge;
+      document.getElementById('bioText').textContent = c.bio;
+      document.getElementById('btnSave').textContent = c.btnSave;
+      document.getElementById('btnCv').textContent = c.btnCv;
+      
+      document.getElementById('cvLink').setAttribute('href', c.cvFile);
+
+      document.getElementById('proj1Title').textContent = c.proj1Title;
+      document.getElementById('proj1Tag').textContent = c.proj1Tag;
+      document.getElementById('proj1Desc').textContent = c.proj1Desc;
+      document.getElementById('proj2Title').textContent = c.proj2Title;
+      document.getElementById('proj2Tag').textContent = c.proj2Tag;
+      document.getElementById('proj2Desc').textContent = c.proj2Desc;
+      document.getElementById('footerText').textContent = c.footer;
+    }
+  </script>
+</body>
+</html>

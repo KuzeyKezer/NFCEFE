@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Güleç;Efe Batı;;;
+FN:Efe Batı Güleç
+ORG:İzmir Yüksek Teknoloji Enstitüsü (İYTE)
+TITLE:Malzeme & Makine Yüksek Mühendisi
+TEL;TYPE=CELL,VOICE;VALUE=uri:tel:+905078920717
+EMAIL;TYPE=INTERNET,HOME:efebatigulec@gmail.com
+URL;TYPE=WORK: www.linkedin.com/in/efe-batı-güleç
+ADR;TYPE=WORK:;;İzmir;;;Turkey
+NOTE:İYTE Toz Metalurjisi Laboratuvarı | Titanyum Kompozitleri & Mekanik Karakterizasyon
+END:VCARD
